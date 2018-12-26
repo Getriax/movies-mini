@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  node-test:
+    image: node-one
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/app
