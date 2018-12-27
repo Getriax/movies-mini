@@ -1,7 +1,9 @@
 FROM node:alpine
-ENV NODE_ENV production
 
-WORKDIR /usr/src/app
+ENV NODE_ENV production
+ENV PORT 3000
+
+WORKDIR /usr/app
 
 RUN apk upgrade --update
 RUN apk add mongodb
@@ -9,4 +11,4 @@ RUN apk add mongodb
 COPY . .
 EXPOSE 3000
 
-CMD ["node", "index.js"]
+CMD ["node", "index.txt"]

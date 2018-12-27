@@ -1,0 +1,8 @@
+{
+  "wow": ".forEach(e => { deep = (obj) => Object.keys(obj).reduce((acc, key) => { acc[key] = obj[key]; if (obj[key] instanceof ObjectId || obj[key] instanceof Date) { acc[key] = obj[key].valueOf(); } return acc; }, {}); s = deep(e); if (e.Ratings) { s.Ratings = e.Ratings.map(r => JSON.stringify(deep(r))); } print(JSON.stringify(s) + ',1!'); });",
+  "rc": "movieId & body required",
+  "rt": "title required",
+  "ct": "content-type",
+  "aj": "application/json",
+  "u": "http://www.omdbapi.com?apiKey"
+}
