@@ -2,11 +2,14 @@ version: '2.1'
 
 services:
   node-test:
-    image: node-one
+    image: getriax/node_movies
+    container_name: node_movies
     build: .
     environment:
       NODE_ENV: production
+    env_file:
+      - .env
     ports:
       - 3000:3000
     volumes:
-      - ./:/usr/src/app
+      - ./:/usr/app
